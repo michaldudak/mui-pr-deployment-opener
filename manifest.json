@@ -1,0 +1,13 @@
+{
+	"manifest_version": 3,
+	"name": "MUI PR deployment opener",
+	"version": "0.0.1",
+	"description": "Opens the deployment of a current pull request",
+	"permissions": ["tabs"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_title": "Open deployed PR"
+	}
+}
