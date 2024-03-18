@@ -1,14 +1,15 @@
 chrome.action.onClicked.addListener(openPreview);
 
 const prRegex =
-	/^https:\/\/github.(?:com|dev)\/mui\/material-ui\/pull\/([0-9]+)/;
+	/^https:\/\/github.(?:com|dev)\/mui\/(material-ui|base-ui)\/pull\/([0-9]+)/;
 
 function openPreview() {
 	getCurrentTab((tab) => {
 		const result = prRegex.exec(tab.url);
 		if (result && result.length >= 2) {
-			const prNumber = result[1];
-			const previewUrl = `https://deploy-preview-${prNumber}--material-ui.netlify.app/`;
+			const project = result[1];
+			const prNumber = result[2];
+			const previewUrl = `https://deploy-preview-${prNumber}--${project}.netlify.app/`;
 
 			chrome.tabs.create({
 				url: previewUrl,

@@ -12,4 +12,4 @@ This extension opens a new tab and navigates to a deployment assocated with the 
 ## Usage
 
 To use it, have a PR open (either in github.com or github.dev) and click on the extension button.
-A new tab will open with its URL set to `https://deploy-preview-[PR_number]--material-ui.netlify.app`
+A new tab will open with its URL set to `https://deploy-preview-[PR_number]--material-ui.netlify.app` or `https://deploy-preview-[PR_number]--base-ui.netlify.app`, depending on the project.
