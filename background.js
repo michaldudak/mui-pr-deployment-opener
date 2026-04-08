@@ -1,7 +1,7 @@
 chrome.action.onClicked.addListener(openPreview);
 
 const prRegex =
-	/^https:\/\/github.(?:com|dev)\/mui\/(material-ui|base-ui)\/pull\/([0-9]+)/;
+	/^https:\/\/github.(?:com|dev)\/mui\/(material-ui|base-ui|base-ui-plus)\/pull\/([0-9]+)/;
 
 function openPreview() {
 	getCurrentTab((tab) => {
@@ -28,6 +28,6 @@ function getCurrentTab(callback) {
 		function (tabs) {
 			var tab = tabs[0];
 			callback(tab);
-		}
+		},
 	);
 }
